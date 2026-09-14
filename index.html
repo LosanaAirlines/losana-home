@@ -3,75 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Losana Airlines | Virtual Airline</title>
+    <title>Losana Airlines | Virtual Airline IVAO</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
-        header { background-color: #0b2545; color: white; text-align: center; padding: 2rem; }
-        nav { background: #134074; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
-        .card { background: #eef4f8; padding: 15px; border-radius: 5px; text-align: center; }
-        footer { background: #0b2545; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9rem; }
-        footer a { color: #8da9c4; }
-        .disclaimer { font-size: 0.8rem; color: #a0a0a0; margin-top: 15px; border-top: 1px solid #333; padding-top: 15px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; color: #333; line-height: 1.6; }
+        header { background-color: #0b2545; color: white; text-align: center; padding: 2.5rem 1rem; }
+        header h1 { font-size: 2.5rem; letter-spacing: 2px; }
+        header p { color: #8da9c4; font-size: 1.1rem; margin-top: 5px; }
+        nav { background: #134074; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+        nav a:hover { color: #8da9c4; }
+        .container { max-width: 1000px; margin: 25px auto; padding: 25px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h2 { color: #0b2545; border-bottom: 2px solid #134074; padding-bottom: 8px; margin-bottom: 15px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .card { background: #eef4f8; padding: 15px; border-radius: 6px; text-align: center; border-left: 4px solid #134074; }
+        .card h3 { font-size: 1rem; color: #134074; margin-bottom: 5px; }
+        .card p { font-size: 1.2rem; font-weight: bold; color: #0b2545; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 12px; text-align: left; }
+        th { background-color: #134074; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        ul { margin-left: 20px; margin-top: 10px; }
+        li { margin-bottom: 8px; }
+        .btn { display: inline-block; background-color: #134074; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+        .btn:hover { background-color: #0b2545; }
+        footer { background: #0b2545; color: white; text-align: center; padding: 25px 15px; margin-top: 40px; font-size: 0.9rem; }
+        footer a { color: #8da9c4; text-decoration: none; }
+        .disclaimer { font-size: 0.8rem; color: #a0a0a0; margin-top: 20px; border-top: 1px solid #2a4365; padding-top: 15px; text-align: justify; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>LOSANA AIRLINES</h1>
-        <p>Aerolínea Virtual Oficial | Hub SEQM - Quito</p>
+        <p>Official Virtual Airline Partner | Main Hub: SEQM (Quito)</p>
     </header>
 
     <nav>
         <a href="#inicio">Inicio</a>
-        <a href="#flota">Flota & Hub</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#flota">Flota</a>
+        <a href="#rutas">Rutas</a>
+        <a href="#reglamento">Reglamento</a>
+        <a href="#unete">Únete</a>
+        <a href="#privacidad">Privacidad</a>
     </nav>
 
     <div class="container" id="inicio">
         <h2>Bienvenido a Losana Airlines</h2>
-        <p>Somos una aerolínea virtual comprometida con la simulación aérea de alta calidad en la red de IVAO, operando desde nuestro Hub principal en Quito, Ecuador.</p>
+        <p>Losana Airlines es una aerolínea virtual orientada a simular operaciones aéreas bajo altos estándares de calidad dentro de la red IVAO, conectando Ecuador con la región desde nuestro Hub en Quito (SEQM).</p>
         
         <div class="info-grid">
             <div class="card">
-                <h3>ICAO</h3>
-                <p><strong>LSA</strong></p>
+                <h3>ICAO CODE</h3>
+                <p>LSA</p>
             </div>
             <div class="card">
-                <h3>Callsign</h3>
-                <p><strong>LOSANA</strong></p>
+                <h3>CALLSIGN</h3>
+                <p>LOSANA</p>
             </div>
             <div class="card">
-                <h3>Main Hub</h3>
-                <p><strong>SEQM (Quito)</strong></p>
+                <h3>MAIN HUB</h3>
+                <p>SEQM (Quito)</p>
+            </div>
+            <div class="card">
+                <h3>NETWORK</h3>
+                <p>IVAO</p>
             </div>
         </div>
     </div>
 
     <div class="container" id="flota">
-        <h2>Operaciones de Vuelo</h2>
-        <p>Próximamente publicaremos el itinerario completo de rutas y la lista de flota activa para nuestros pilotos.</p>
+        <h2>Nuestra Flota</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aeronave</th>
+                    <th>Tipo ICAO</th>
+                    <th>Alcance / Uso</th>
+                    <th>Base</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td>A20N</td>
+                    <td>Rutas Nacionales y Regionales</td>
+                    <td>SEQM</td>
+                </tr>
+                <tr>
+                    <td>Boeing 737-800</td>
+                    <td>B738</td>
+                    <td>Rutas Regionales / Sudamérica</td>
+                    <td>SEQM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container" id="rutas">
+        <h2>Rutas Principales (Hub SEQM)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Origen</th>
+                    <th>Destino</th>
+                    <th>ICAO Origen - Destino</th>
+                    <th>Aeronave Recomendada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Quito</td>
+                    <td>Guayaquil</td>
+                    <td>SEQM - SEGU</td>
+                    <td>A20N / B738</td>
+                </tr>
+                <tr>
+                    <td>Quito</td>
+                    <td>Bogotá</td>
+                    <td>SEQM - SKBO</td>
+                    <td>A20N / B738</td>
+                </tr>
+                <tr>
+                    <td>Quito</td>
+                    <td>Lima</td>
+                    <td>SEQM - SPJC</td>
+                    <td>A20N / B738</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container" id="reglamento">
+        <h2>Normativa y Reglamento IVAO</h2>
+        <ul>
+            <li><strong>Operaciones Gratis:</strong> Losana Airlines es totalmente gratuita para todos los miembros de la red IVAO (F.4.1).</li>
+            <li><strong>Remark Obligatorio:</strong> Todo vuelo reportado debe incluir en la casilla 18 (Remarks) del plan de vuelo el código: <code>RMK/IVAOVA/LSA</code> (F.5.4.3).</li>
+            <li><strong>Inactividad:</strong> Se requiere completar al menos 1 hora de vuelo mensual para mantener el estatus de piloto activo (F.5.3).</li>
+        </ul>
+    </div>
+
+    <div class="container" id="unete">
+        <h2>Unirse a Losana Airlines</h2>
+        <p>¿Quieres volar con nosotros en IVAO? Completa nuestro formulario de inscripción y nos pondremos en contacto contigo.</p>
+        <a href="#contacto" class="btn">Solicitar Ingreso</a>
+    </div>
+
+    <div class="container" id="privacidad">
+        <h2>Política de Privacidad y Datos (GDPR - F.5.4.1)</h2>
+        <p>En cumplimiento con la normativa F.5.4.1 de IVAO, Losana Airlines solo recopila el VID de IVAO y la dirección de correo electrónico del piloto para fines estrictamente administrativos dentro de la aerolínea virtual. Los datos no serán compartidos ni vendidos a terceros.</p>
     </div>
 
     <div class="container" id="contacto">
         <h2>Administración</h2>
         <p><strong>CEO / Fundador:</strong> VID 652557</p>
-        <p><strong>Contacto:</strong> losanaairlines@gmail.com</p>
+        <p><strong>Correo Oficial:</strong> losanaairlines@gmail.com</p>
     </div>
 
     <footer>
-        <p>Losana Airlines - Partner Virtual Airline</p>
-        <!-- Requisito IVAO F.5.4.2: Logo enlazado -->
-        <p>
+        <p>Losana Airlines &copy; 2026 - Virtual Airline Project</p>
+        <p style="margin-top: 10px;">
             <a href="https://ivao.aero" target="_blank">
-                <img src="https://www.ivao.aero/assets/images/logo.png" alt="IVAO Logo" style="height: 40px;">
+                <img src="https://www.ivao.aero/assets/images/logo.png" alt="IVAO Logo" style="height: 45px;">
             </a>
         </p>
-        <!-- Requisito IVAO Disclaimer Obligatorio -->
         <div class="disclaimer">
-            <p><strong>DISCLAIMER:</strong> Losana Airlines es una organización de aviación virtual. No tenemos ninguna afiliación con aerolíneas comerciales ni empresas de aviación real. Todos los servicios y operaciones son exclusivamente para uso en simulación de vuelo en la red IVAO.</p>
+            <p><strong>DISCLAIMER:</strong> Losana Airlines es una organización de aviación virtual que opera de manera independiente y sin fines de lucro, dedicada exclusivamente a la simulación de vuelo en la red IVAO. No poseemos afiliación, relación comercial ni respaldo de ninguna aerolínea real o entidad aeronáutica del mundo real. Todos los logos e imágenes de IVAO son propiedad intelectual de IVAO VZW.</p>
         </div>
     </footer>
 
