@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losana Airlines | Virtual Airline</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
+        header { background-color: #0b2545; color: white; text-align: center; padding: 2rem; }
+        nav { background: #134074; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
+        .card { background: #eef4f8; padding: 15px; border-radius: 5px; text-align: center; }
+        footer { background: #0b2545; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9rem; }
+        footer a { color: #8da9c4; }
+        .disclaimer { font-size: 0.8rem; color: #a0a0a0; margin-top: 15px; border-top: 1px solid #333; padding-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LOSANA AIRLINES</h1>
+        <p>Aerolínea Virtual Oficial | Hub SEQM - Quito</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#flota">Flota & Hub</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="container" id="inicio">
+        <h2>Bienvenido a Losana Airlines</h2>
+        <p>Somos una aerolínea virtual comprometida con la simulación aérea de alta calidad en la red de IVAO, operando desde nuestro Hub principal en Quito, Ecuador.</p>
+        
+        <div class="info-grid">
+            <div class="card">
+                <h3>ICAO</h3>
+                <p><strong>LSA</strong></p>
+            </div>
+            <div class="card">
+                <h3>Callsign</h3>
+                <p><strong>LOSANA</strong></p>
+            </div>
+            <div class="card">
+                <h3>Main Hub</h3>
+                <p><strong>SEQM (Quito)</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="flota">
+        <h2>Operaciones de Vuelo</h2>
+        <p>Próximamente publicaremos el itinerario completo de rutas y la lista de flota activa para nuestros pilotos.</p>
+    </div>
+
+    <div class="container" id="contacto">
+        <h2>Administración</h2>
+        <p><strong>CEO / Fundador:</strong> VID 652557</p>
+        <p><strong>Contacto:</strong> losanaairlines@gmail.com</p>
+    </div>
+
+    <footer>
+        <p>Losana Airlines - Partner Virtual Airline</p>
+        <!-- Requisito IVAO F.5.4.2: Logo enlazado -->
+        <p>
+            <a href="https://ivao.aero" target="_blank">
+                <img src="https://www.ivao.aero/assets/images/logo.png" alt="IVAO Logo" style="height: 40px;">
+            </a>
+        </p>
+        <!-- Requisito IVAO Disclaimer Obligatorio -->
+        <div class="disclaimer">
+            <p><strong>DISCLAIMER:</strong> Losana Airlines es una organización de aviación virtual. No tenemos ninguna afiliación con aerolíneas comerciales ni empresas de aviación real. Todos los servicios y operaciones son exclusivamente para uso en simulación de vuelo en la red IVAO.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
