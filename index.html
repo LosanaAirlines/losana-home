@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Losana Airlines | Virtual Airline IVAO</title>
+    <title>Losana Airlines | IVAO Virtual Airline</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; color: #333; line-height: 1.6; }
@@ -26,12 +26,11 @@
         tr:nth-child(even) { background-color: #f9f9f9; }
         ul { margin-left: 20px; margin-top: 10px; }
         li { margin-bottom: 8px; }
-        .btn { display: inline-block; background-color: #134074; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+        .btn { display: inline-block; background-color: #134074; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; margin-right: 10px; }
         .btn:hover { background-color: #0b2545; }
         footer { background: #0b2545; color: white; text-align: center; padding: 25px 15px; margin-top: 40px; font-size: 0.9rem; }
         footer a { color: #8da9c4; text-decoration: none; }
         .disclaimer { font-size: 0.8rem; color: #a0a0a0; margin-top: 20px; border-top: 1px solid #2a4365; padding-top: 15px; text-align: justify; }
-        .lang-en { color: #555; font-style: italic; margin-top: 4px; }
     </style>
 </head>
 <body>
@@ -42,18 +41,17 @@
     </header>
 
     <nav>
-        <a href="#inicio">Home / Inicio</a>
-        <a href="#flota">Fleet / Flota</a>
-        <a href="#rutas">Routes / Rutas</a>
-        <a href="#reglamento">Rules / Reglamento</a>
-        <a href="#unete">Join Us / Únete</a>
-        <a href="#privacidad">Privacy / Privacidad</a>
+        <a href="#about">About Us</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#routes">Routes</a>
+        <a href="#rules">Rules</a>
+        <a href="#join">Join & Operations</a>
+        <a href="#privacy">Privacy</a>
     </nav>
 
-    <div class="container" id="inicio">
-        <h2>Welcome to Losana Airlines / Bienvenido</h2>
-        <p>Losana Airlines is a virtual airline oriented to simulate flight operations under high quality standards within the IVAO network, connecting Ecuador with the region from our Main Hub in Quito (SEQM).</p>
-        <p class="lang-en">Losana Airlines es una aerolínea virtual orientada a simular operaciones aéreas bajo altos estándares de calidad dentro de la red IVAO, conectando Ecuador con la región desde nuestro Hub en Quito (SEQM).</p>
+    <div class="container" id="about">
+        <h2>Welcome to Losana Airlines</h2>
+        <p>Losana Airlines is a virtual airline dedicated to simulating high-standard flight operations within the IVAO network. Operating out of our main hub at Mariscal Sucre International Airport (SEQM) in Quito, Ecuador, we connect South America with regional and domestic flight networks.</p>
         
         <div class="info-grid">
             <div class="card">
@@ -75,15 +73,15 @@
         </div>
     </div>
 
-    <div class="container" id="flota">
-        <h2>Our Fleet / Nuestra Flota</h2>
+    <div class="container" id="fleet">
+        <h2>Our Fleet</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Aircraft / Aeronave</th>
+                    <th>Aircraft</th>
                     <th>ICAO Type</th>
-                    <th>Range & Usage / Alcance</th>
-                    <th>Base</th>
+                    <th>Range & Operations</th>
+                    <th>Base Hub</th>
                 </tr>
             </thead>
             <tbody>
@@ -103,13 +101,13 @@
         </table>
     </div>
 
-    <div class="container" id="rutas">
-        <h2>Main Routes / Rutas Principales (Hub SEQM)</h2>
+    <div class="container" id="routes">
+        <h2>Main Routes (Hub SEQM)</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Origin / Origen</th>
-                    <th>Destination / Destino</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
                     <th>ICAO Pair</th>
                     <th>Recommended Aircraft</th>
                 </tr>
@@ -137,31 +135,32 @@
         </table>
     </div>
 
-    <div class="container" id="reglamento">
-        <h2>Rules & Regulations / Normativa IVAO</h2>
+    <div class="container" id="rules">
+        <h2>Rules & Regulations</h2>
         <ul>
-            <li><strong>Free Operations:</strong> Joining and flying for Losana Airlines is 100% free of charge (F.4.1).</li>
-            <li><strong>Mandatory Remark:</strong> All filed flights must include the code <code>RMK/IVAOVA/LSA</code> in Item 18 (Remarks) of the flight plan (F.5.4.3).</li>
-            <li><strong>Inactivity Policy:</strong> Pilots must complete at least 1 flight hour per month to remain active (F.5.3).</li>
+            <li><strong>Free Operations:</strong> Joining and flying for Losana Airlines is 100% free of charge (IVAO Rule F.4.1).</li>
+            <li><strong>Mandatory Remark:</strong> All flight plans submitted on IVAO must include <code>RMK/IVAOVA/LSA</code> in Item 18 (IVAO Rule F.5.4.3).</li>
+            <li><strong>Inactivity Policy:</strong> Pilots are required to log at least 1 flight hour per month to remain on active status (IVAO Rule F.5.3).</li>
         </ul>
     </div>
 
-    <div class="container" id="unete">
-        <h2>Join Losana Airlines / Únete</h2>
-        <p>Do you want to fly with us on IVAO? Fill out our application form and we will contact you shortly.</p>
-        <p class="lang-en">¿Quieres volar con nosotros en IVAO? Completa nuestro formulario de inscripción y nos pondremos en contacto contigo.</p>
-        <a href="#contacto" class="btn">Apply Now / Solicitar Ingreso</a>
+    <div class="container" id="join">
+        <h2>Join & File PIREPs</h2>
+        <p>Interested in flying with us on IVAO or submitting a completed flight report? Use the official portals below:</p>
+        <br>
+        <a href="https://forms.gle/qqMuPQnzbnQT7zSt6" target="_blank" class="btn">Apply Now</a>
+        <a href="https://forms.gle/ciLSU9aFj3P2L4Yh8" target="_blank" class="btn">File PIREP</a>
     </div>
 
-    <div class="container" id="privacidad">
-        <h2>Privacy Policy / Política de Privacidad (GDPR - F.5.4.1)</h2>
-        <p>In compliance with IVAO rule F.5.4.1, Losana Airlines only collects pilot IVAO VID and email address strictly for internal management purposes. Personal data will never be shared or sold to third parties.</p>
+    <div class="container" id="privacy">
+        <h2>Privacy Policy (GDPR - F.5.4.1)</h2>
+        <p>In accordance with IVAO regulation F.5.4.1, Losana Airlines strictly collects pilot IVAO VIDs and email addresses for internal administrative purposes only. Personal data will never be sold, rented, or shared with third parties.</p>
     </div>
 
     <div class="container" id="contacto">
-        <h2>Staff & Management</h2>
+        <h2>Executive & Management</h2>
         <p><strong>CEO / Founder:</strong> VID 652557</p>
-        <p><strong>Official Email:</strong> losanaairlines@gmail.com</p>
+        <p><strong>Official Contact:</strong> losanaairlines@gmail.com</p>
     </div>
 
     <footer>
