@@ -4,33 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Losana Airlines | IVAO Virtual Airline</title>
+    <!-- Google Fonts Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; color: #333; line-height: 1.6; }
-        header { background-color: #0b2545; color: white; text-align: center; padding: 2.5rem 1rem; }
-        header h1 { font-size: 2.5rem; letter-spacing: 2px; }
-        header p { color: #8da9c4; font-size: 1.1rem; margin-top: 5px; }
-        nav { background: #134074; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
-        nav a:hover { color: #8da9c4; }
-        .container { max-width: 1000px; margin: 25px auto; padding: 25px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-        h2 { color: #0b2545; border-bottom: 2px solid #134074; padding-bottom: 8px; margin-bottom: 15px; }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
-        .card { background: #eef4f8; padding: 15px; border-radius: 6px; text-align: center; border-left: 4px solid #134074; }
-        .card h3 { font-size: 1rem; color: #134074; margin-bottom: 5px; }
-        .card p { font-size: 1.2rem; font-weight: bold; color: #0b2545; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        table, th, td { border: 1px solid #ddd; }
-        th, td { padding: 12px; text-align: left; }
-        th { background-color: #134074; color: white; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
+        
+        /* Banner Header */
+        header { 
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.95), rgba(0, 119, 182, 0.85)), 
+                        url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            text-align: center; 
+            padding: 4rem 1rem; 
+        }
+        header h1 { font-size: 3rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+        header p { color: #93c5fd; font-size: 1.2rem; margin-top: 8px; font-weight: 600; }
+        
+        /* Navigation Bar */
+        nav { background: #0a192f; padding: 14px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        nav a { color: #f8fafc; margin: 0 15px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; transition: color 0.3s; }
+        nav a:hover { color: #38bdf8; }
+        
+        /* Section Containers */
+        .container { max-width: 1000px; margin: 30px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        h2 { color: #0a192f; border-bottom: 3px solid #0077b6; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.6rem; }
+        
+        /* Info Grid */
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 25px 0; }
+        .card { background: #f0f9ff; padding: 20px; border-radius: 8px; text-align: center; border-top: 4px solid #0077b6; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .card h3 { font-size: 0.9rem; color: #0369a1; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .card p { font-size: 1.3rem; font-weight: 700; color: #0a192f; }
+        
+        /* Fleet & Route Tables */
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; border-radius: 8px; overflow: hidden; }
+        table, th, td { border: 1px solid #e2e8f0; }
+        th, td { padding: 14px; text-align: left; }
+        th { background-color: #0077b6; color: white; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+        tr:nth-child(even) { background-color: #f8fafc; }
+        
+        /* Buttons */
         ul { margin-left: 20px; margin-top: 10px; }
-        li { margin-bottom: 8px; }
-        .btn { display: inline-block; background-color: #134074; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; margin-right: 10px; }
-        .btn:hover { background-color: #0b2545; }
-        footer { background: #0b2545; color: white; text-align: center; padding: 25px 15px; margin-top: 40px; font-size: 0.9rem; }
-        footer a { color: #8da9c4; text-decoration: none; }
-        .disclaimer { font-size: 0.8rem; color: #a0a0a0; margin-top: 20px; border-top: 1px solid #2a4365; padding-top: 15px; text-align: justify; }
+        li { margin-bottom: 10px; }
+        .btn { display: inline-block; background-color: #0077b6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 15px; margin-right: 12px; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn:hover { background-color: #0284c7; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+        
+        /* Footer & IVAO VA Branding */
+        footer { background: #0a192f; color: white; text-align: center; padding: 30px 15px; margin-top: 50px; font-size: 0.9rem; }
+        footer a { color: #38bdf8; text-decoration: none; }
+        .ivao-branding { margin-top: 15px; display: inline-block; text-align: center; }
+        .ivao-logo { height: 45px; background: white; padding: 6px 12px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); vertical-align: middle; }
+        .ivao-label { display: block; font-size: 0.75rem; color: #93c5fd; margin-top: 6px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+        .disclaimer { font-size: 0.8rem; color: #94a3b8; margin-top: 25px; border-top: 1px solid #1e293b; padding-top: 20px; text-align: justify; line-height: 1.5; }
     </style>
 </head>
 <body>
@@ -165,11 +194,12 @@
 
     <footer>
         <p>Losana Airlines &copy; 2026 - Virtual Airline Project</p>
-        <p style="margin-top: 10px;">
+        <div class="ivao-branding">
             <a href="https://ivao.aero" target="_blank">
-                <img src="https://www.ivao.aero/assets/images/logo.png" alt="IVAO Logo" style="height: 45px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/IVAO_Logo.png" alt="IVAO Virtual Airline Logo" class="ivao-logo">
             </a>
-        </p>
+            <span class="ivao-label">Official IVAO Virtual Airline Partner</span>
+        </div>
         <div class="disclaimer">
             <p><strong>DISCLAIMER:</strong> Losana Airlines is an independent, non-profit virtual airline project dedicated exclusively to flight simulation within the IVAO network. We have no affiliation, commercial relationship, or endorsement from any real-world airline or aeronautical entity. All IVAO logos and trademarks belong to IVAO VZW.</p>
         </div>
