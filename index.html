@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Losana Airlines | IVAO Virtual Airline</title>
-    <!-- Favicon Icon -->
     <link rel="icon" type="image/jpeg" href="Losana Airlines.jpg">
-    <!-- Google Fonts Integration -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Montserrat', sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
         
-        /* Header & Logo */
+        /* Fondo general integrado a la paleta de la aerolínea */
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: linear-gradient(180deg, #0a192f 0%, #0f172a 100%); 
+            color: #f1f5f9; 
+            line-height: 1.6; 
+        }
+        
+        /* Header & Integration del Logo */
         header { 
             background: linear-gradient(135deg, rgba(10, 25, 47, 0.95), rgba(0, 119, 182, 0.85)), 
                         url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop');
@@ -22,74 +27,102 @@
             background-position: center;
             color: white; 
             text-align: center; 
-            padding: 3rem 1rem; 
+            padding: 4rem 1rem 3rem 1rem; 
         }
+        
+        /* Integración directa de la imagen sin recuadro */
+        .logo-container {
+            display: inline-block;
+            max-width: 450px;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+        
         .header-logo {
-            max-width: 320px;
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            margin-bottom: 12px;
+            display: block;
+            mix-blend-mode: screen; /* Elimina contrastes del recuadro de la foto */
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
         }
-        header p { color: #93c5fd; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.5px; }
         
-        /* Navigation Bar */
-        nav { background: #0a192f; padding: 14px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-        nav a { color: #f8fafc; margin: 0 15px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; transition: color 0.3s; }
+        header p { color: #38bdf8; font-size: 1.25rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+        
+        /* Bar / Navigation */
+        nav { background: #0a192f; padding: 14px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); border-bottom: 1px solid rgba(56, 189, 248, 0.2); }
+        nav a { color: #f8fafc; margin: 0 12px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; transition: color 0.3s; }
         nav a:hover { color: #38bdf8; }
+        nav .nav-portal { background-color: #0077b6; padding: 6px 14px; border-radius: 4px; border: 1px solid #38bdf8; }
+        nav .nav-portal:hover { background-color: #0284c7; }
+
+        /* Contenedores */
+        .container { max-width: 1000px; margin: 35px auto; padding: 35px; background: #1e293b; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); border: 1px solid #334155; }
+        h2 { color: #38bdf8; border-bottom: 3px solid #0077b6; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.6rem; }
         
-        /* Section Containers */
-        .container { max-width: 1000px; margin: 30px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        h2 { color: #0a192f; border-bottom: 3px solid #0077b6; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.6rem; }
-        
-        /* Info Grid */
+        /* Grid de Info */
         .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 25px 0; }
-        .card { background: #f0f9ff; padding: 20px; border-radius: 8px; text-align: center; border-top: 4px solid #0077b6; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-        .card h3 { font-size: 0.9rem; color: #0369a1; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        .card p { font-size: 1.3rem; font-weight: 700; color: #0a192f; }
+        .card { background: #0f172a; padding: 20px; border-radius: 8px; text-align: center; border-top: 4px solid #0077b6; }
+        .card h3 { font-size: 0.85rem; color: #94a3b8; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .card p { font-size: 1.3rem; font-weight: 700; color: #f8fafc; }
         
-        /* Fleet & Route Tables */
+        /* Tarjetas de Sub-divisiones */
+        .division-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .division-card { background: #0f172a; border-radius: 8px; padding: 20px; border-left: 4px solid #0077b6; }
+        .division-card.regional { border-left-color: #0284c7; }
+        .division-card.medical { border-left-color: #ef4444; }
+        .division-card h3 { color: #f8fafc; font-size: 1.2rem; margin-bottom: 8px; }
+        .division-card p { font-size: 0.95rem; color: #cbd5e1; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; margin-top: 10px; text-transform: uppercase; }
+        .badge-main { background: #0077b6; color: white; }
+        .badge-reg { background: #0284c7; color: white; }
+        .badge-med { background: #dc2626; color: white; }
+
+        /* Tablas */
         table { width: 100%; border-collapse: collapse; margin-top: 15px; border-radius: 8px; overflow: hidden; }
-        table, th, td { border: 1px solid #e2e8f0; }
+        table, th, td { border: 1px solid #334155; }
         th, td { padding: 14px; text-align: left; }
         th { background-color: #0077b6; color: white; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
-        tr:nth-child(even) { background-color: #f8fafc; }
-        
-        /* Buttons */
+        tr:nth-child(even) { background-color: #0f172a; }
+        tr:nth-child(odd) { background-color: #1e293b; }
+
+        /* Botones */
         ul { margin-left: 20px; margin-top: 10px; }
         li { margin-bottom: 10px; }
-        .btn { display: inline-block; background-color: #0077b6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 15px; margin-right: 12px; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .btn:hover { background-color: #0284c7; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
-        
-        /* Footer & IVAO VA Branding */
-        footer { background: #0a192f; color: white; text-align: center; padding: 30px 15px; margin-top: 50px; font-size: 0.9rem; }
+        .btn { display: inline-block; background-color: #0077b6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 15px; margin-right: 12px; transition: all 0.3s ease; }
+        .btn:hover { background-color: #0284c7; transform: translateY(-2px); }
+        .btn-portal { background-color: #0284c7; border: 1px solid #38bdf8; }
+
+        /* Footer */
+        footer { background: #0a192f; color: white; text-align: center; padding: 30px 15px; margin-top: 50px; font-size: 0.9rem; border-top: 1px solid rgba(56, 189, 248, 0.2); }
         footer a { color: #38bdf8; text-decoration: none; }
         .ivao-branding { margin-top: 15px; display: inline-block; text-align: center; }
-        .ivao-logo { height: 45px; background: white; padding: 6px 12px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); vertical-align: middle; }
+        .ivao-logo { height: 45px; background: white; padding: 6px 12px; border-radius: 6px; vertical-align: middle; }
         .ivao-label { display: block; font-size: 0.75rem; color: #93c5fd; margin-top: 6px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
-        .disclaimer { font-size: 0.8rem; color: #94a3b8; margin-top: 25px; border-top: 1px solid #1e293b; padding-top: 20px; text-align: justify; line-height: 1.5; }
+        .disclaimer { font-size: 0.8rem; color: #94a3b8; margin-top: 25px; border-top: 1px solid #334155; padding-top: 20px; text-align: justify; line-height: 1.5; }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="Losana Airlines.jpg" alt="Losana Airlines Logo" class="header-logo">
+        <div class="logo-container">
+            <img src="Losana Airlines.jpg" alt="Losana Airlines Logo" class="header-logo">
+        </div>
         <p>Official IVAO Virtual Airline Partner</p>
     </header>
 
     <nav>
         <a href="#about">About Us</a>
+        <a href="#divisions">Divisions</a>
         <a href="#fleet">Fleet</a>
         <a href="#routes">Routes</a>
         <a href="#rules">Rules</a>
-        <a href="#join">Join & Operations</a>
-        <a href="#privacy">Privacy</a>
+        <a href="#join">Join Us</a>
+        <a href="https://sites.google.com" target="_blank" class="nav-portal">Pilot Portal 🔒</a>
     </nav>
 
     <div class="container" id="about">
         <h2>Welcome to Losana Airlines</h2>
-        <p>Losana Airlines is a virtual airline dedicated to simulating high-standard flight operations within the IVAO network. Operating out of our main hub at Mariscal Sucre International Airport (SEQM) in Quito, Ecuador, we connect South America with regional and domestic flight networks.</p>
+        <p>Losana Airlines is a virtual airline dedicated to high-standard flight simulation within the IVAO network. Operating out of our primary hub at Mariscal Sucre International Airport (SEQM) in Quito, Ecuador, we connect domestic, regional, and specialized air medical networks.</p>
         
         <div class="info-grid">
             <div class="card">
@@ -111,29 +144,62 @@
         </div>
     </div>
 
+    <div class="container" id="divisions">
+        <h2>Airline Divisions</h2>
+        <div class="division-grid">
+            <div class="division-card">
+                <h3>Losana Main Division</h3>
+                <p>Handles core domestic trunk routes and regional international operations connecting Quito with major South American capitals.</p>
+                <span class="badge badge-main">1x Airbus A320neo</span>
+            </div>
+            <div class="division-card regional">
+                <h3>Losana Regional</h3>
+                <p>Specialized branch operating regional turboprop services to short runways and regional airports across Ecuador.</p>
+                <span class="badge badge-reg">ATR Fleet & Kodiak 100</span>
+            </div>
+            <div class="division-card medical">
+                <h3>Losana Health Center (LAMHC)</h3>
+                <p>Dedicated medical evacuation (Medevac), HEMS, and emergency air rescue operations across remote regions.</p>
+                <span class="badge badge-med">Air Ambulance / SAR</span>
+            </div>
+        </div>
+    </div>
+
     <div class="container" id="fleet">
-        <h2>Our Fleet</h2>
+        <h2>Operational Fleet</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Aircraft</th>
-                    <th>ICAO Type</th>
-                    <th>Range & Operations</th>
-                    <th>Base Hub</th>
+                    <th>Division</th>
+                    <th>Aircraft Type</th>
+                    <th>ICAO Code</th>
+                    <th>Operations</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td>Losana Main</td>
                     <td>Airbus A320neo</td>
                     <td>A20N</td>
-                    <td>Domestic & Regional Routes</td>
-                    <td>SEQM</td>
+                    <td>Domestic & Main Regional Routes</td>
                 </tr>
                 <tr>
-                    <td>Boeing 737-800</td>
-                    <td>B738</td>
-                    <td>Regional Routes / South America</td>
-                    <td>SEQM</td>
+                    <td>Losana Regional</td>
+                    <td>ATR Series (42/72)</td>
+                    <td>AT76 / AT46</td>
+                    <td>Regional Feeder Routes</td>
+                </tr>
+                <tr>
+                    <td>Losana Regional</td>
+                    <td>Kodiak 100</td>
+                    <td>KODI</td>
+                    <td>STOL & Short Field Operations</td>
+                </tr>
+                <tr>
+                    <td>LAMHC Medical</td>
+                    <td>Air Ambulance Fleet</td>
+                    <td>MEDEVAC</td>
+                    <td>Emergency Medical & Rescue Ops</td>
                 </tr>
             </tbody>
         </table>
@@ -147,7 +213,7 @@
                     <th>Origin</th>
                     <th>Destination</th>
                     <th>ICAO Pair</th>
-                    <th>Recommended Aircraft</th>
+                    <th>Division</th>
                 </tr>
             </thead>
             <tbody>
@@ -155,50 +221,45 @@
                     <td>Quito</td>
                     <td>Guayaquil</td>
                     <td>SEQM - SEGU</td>
-                    <td>A20N / B738</td>
+                    <td>Losana Main / Regional</td>
                 </tr>
                 <tr>
                     <td>Quito</td>
                     <td>Bogotá</td>
                     <td>SEQM - SKBO</td>
-                    <td>A20N / B738</td>
+                    <td>Losana Main</td>
                 </tr>
                 <tr>
                     <td>Quito</td>
-                    <td>Lima</td>
-                    <td>SEQM - SPJC</td>
-                    <td>A20N / B738</td>
+                    <td>Cuenca</td>
+                    <td>SEQM - SECU</td>
+                    <td>Losana Regional</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="container" id="rules">
-        <h2>Rules & Regulations</h2>
+        <h2>IVAO Rules & Compliance</h2>
         <ul>
-            <li><strong>Free Operations:</strong> Joining and flying for Losana Airlines is 100% free of charge (IVAO Rule F.4.1).</li>
-            <li><strong>Mandatory Remark:</strong> All flight plans submitted on IVAO must include <code>RMK/IVAOVA/LSA</code> in Item 18 (IVAO Rule F.5.4.3).</li>
-            <li><strong>Inactivity Policy:</strong> Pilots are required to log at least 1 flight hour per month to remain on active status (IVAO Rule F.5.3).</li>
+            <li><strong>Free Operations:</strong> Joining and flying for Losana Airlines is 100% free (IVAO Rule F.4.1).</li>
+            <li><strong>Mandatory Remark:</strong> All flight plans on IVAO must include <code>RMK/IVAOVA/LSA</code> in Item 18 (IVAO Rule F.5.4.3).</li>
+            <li><strong>Inactivity Policy:</strong> Pilots must log a minimum of 1 hour per month to remain active (IVAO Rule F.5.3).</li>
         </ul>
     </div>
 
     <div class="container" id="join">
-        <h2>Join & File PIREPs</h2>
-        <p>Interested in flying with us on IVAO or submitting a completed flight report? Use the official portals below:</p>
+        <h2>Join & Pilot Operations</h2>
+        <p>Apply to become a pilot or access the internal pilot portal for scheduling and flight reports:</p>
         <br>
         <a href="https://forms.gle/qqMuPQnzbnQT7zSt6" target="_blank" class="btn">Apply Now</a>
         <a href="https://forms.gle/ciLSU9aFj3P2L4Yh8" target="_blank" class="btn">File PIREP</a>
+        <a href="https://sites.google.com" target="_blank" class="btn btn-portal">Pilot Portal Access 🔒</a>
     </div>
 
     <div class="container" id="privacy">
         <h2>Privacy Policy (GDPR - F.5.4.1)</h2>
         <p>In accordance with IVAO regulation F.5.4.1, Losana Airlines strictly collects pilot IVAO VIDs and email addresses for internal administrative purposes only. Personal data will never be sold, rented, or shared with third parties.</p>
-    </div>
-
-    <div class="container" id="contacto">
-        <h2>Executive & Management</h2>
-        <p><strong>CEO / Founder:</strong> VID 652557</p>
-        <p><strong>Official Contact:</strong> losanaairlines@gmail.com</p>
     </div>
 
     <footer>
