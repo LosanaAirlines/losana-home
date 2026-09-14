@@ -31,6 +31,7 @@
         footer { background: #0b2545; color: white; text-align: center; padding: 25px 15px; margin-top: 40px; font-size: 0.9rem; }
         footer a { color: #8da9c4; text-decoration: none; }
         .disclaimer { font-size: 0.8rem; color: #a0a0a0; margin-top: 20px; border-top: 1px solid #2a4365; padding-top: 15px; text-align: justify; }
+        .lang-en { color: #555; font-style: italic; margin-top: 4px; }
     </style>
 </head>
 <body>
@@ -41,17 +42,18 @@
     </header>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#flota">Flota</a>
-        <a href="#rutas">Rutas</a>
-        <a href="#reglamento">Reglamento</a>
-        <a href="#unete">Únete</a>
-        <a href="#privacidad">Privacidad</a>
+        <a href="#inicio">Home / Inicio</a>
+        <a href="#flota">Fleet / Flota</a>
+        <a href="#rutas">Routes / Rutas</a>
+        <a href="#reglamento">Rules / Reglamento</a>
+        <a href="#unete">Join Us / Únete</a>
+        <a href="#privacidad">Privacy / Privacidad</a>
     </nav>
 
     <div class="container" id="inicio">
-        <h2>Bienvenido a Losana Airlines</h2>
-        <p>Losana Airlines es una aerolínea virtual orientada a simular operaciones aéreas bajo altos estándares de calidad dentro de la red IVAO, conectando Ecuador con la región desde nuestro Hub en Quito (SEQM).</p>
+        <h2>Welcome to Losana Airlines / Bienvenido</h2>
+        <p>Losana Airlines is a virtual airline oriented to simulate flight operations under high quality standards within the IVAO network, connecting Ecuador with the region from our Main Hub in Quito (SEQM).</p>
+        <p class="lang-en">Losana Airlines es una aerolínea virtual orientada a simular operaciones aéreas bajo altos estándares de calidad dentro de la red IVAO, conectando Ecuador con la región desde nuestro Hub en Quito (SEQM).</p>
         
         <div class="info-grid">
             <div class="card">
@@ -74,13 +76,13 @@
     </div>
 
     <div class="container" id="flota">
-        <h2>Nuestra Flota</h2>
+        <h2>Our Fleet / Nuestra Flota</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Aeronave</th>
-                    <th>Tipo ICAO</th>
-                    <th>Alcance / Uso</th>
+                    <th>Aircraft / Aeronave</th>
+                    <th>ICAO Type</th>
+                    <th>Range & Usage / Alcance</th>
                     <th>Base</th>
                 </tr>
             </thead>
@@ -88,13 +90,13 @@
                 <tr>
                     <td>Airbus A320neo</td>
                     <td>A20N</td>
-                    <td>Rutas Nacionales y Regionales</td>
+                    <td>Domestic & Regional Routes</td>
                     <td>SEQM</td>
                 </tr>
                 <tr>
                     <td>Boeing 737-800</td>
                     <td>B738</td>
-                    <td>Rutas Regionales / Sudamérica</td>
+                    <td>Regional Routes / South America</td>
                     <td>SEQM</td>
                 </tr>
             </tbody>
@@ -102,14 +104,14 @@
     </div>
 
     <div class="container" id="rutas">
-        <h2>Rutas Principales (Hub SEQM)</h2>
+        <h2>Main Routes / Rutas Principales (Hub SEQM)</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Origen</th>
-                    <th>Destino</th>
-                    <th>ICAO Origen - Destino</th>
-                    <th>Aeronave Recomendada</th>
+                    <th>Origin / Origen</th>
+                    <th>Destination / Destino</th>
+                    <th>ICAO Pair</th>
+                    <th>Recommended Aircraft</th>
                 </tr>
             </thead>
             <tbody>
@@ -136,29 +138,30 @@
     </div>
 
     <div class="container" id="reglamento">
-        <h2>Normativa y Reglamento IVAO</h2>
+        <h2>Rules & Regulations / Normativa IVAO</h2>
         <ul>
-            <li><strong>Operaciones Gratis:</strong> Losana Airlines es totalmente gratuita para todos los miembros de la red IVAO (F.4.1).</li>
-            <li><strong>Remark Obligatorio:</strong> Todo vuelo reportado debe incluir en la casilla 18 (Remarks) del plan de vuelo el código: <code>RMK/IVAOVA/LSA</code> (F.5.4.3).</li>
-            <li><strong>Inactividad:</strong> Se requiere completar al menos 1 hora de vuelo mensual para mantener el estatus de piloto activo (F.5.3).</li>
+            <li><strong>Free Operations:</strong> Joining and flying for Losana Airlines is 100% free of charge (F.4.1).</li>
+            <li><strong>Mandatory Remark:</strong> All filed flights must include the code <code>RMK/IVAOVA/LSA</code> in Item 18 (Remarks) of the flight plan (F.5.4.3).</li>
+            <li><strong>Inactivity Policy:</strong> Pilots must complete at least 1 flight hour per month to remain active (F.5.3).</li>
         </ul>
     </div>
 
     <div class="container" id="unete">
-        <h2>Unirse a Losana Airlines</h2>
-        <p>¿Quieres volar con nosotros en IVAO? Completa nuestro formulario de inscripción y nos pondremos en contacto contigo.</p>
-        <a href="#contacto" class="btn">Solicitar Ingreso</a>
+        <h2>Join Losana Airlines / Únete</h2>
+        <p>Do you want to fly with us on IVAO? Fill out our application form and we will contact you shortly.</p>
+        <p class="lang-en">¿Quieres volar con nosotros en IVAO? Completa nuestro formulario de inscripción y nos pondremos en contacto contigo.</p>
+        <a href="#contacto" class="btn">Apply Now / Solicitar Ingreso</a>
     </div>
 
     <div class="container" id="privacidad">
-        <h2>Política de Privacidad y Datos (GDPR - F.5.4.1)</h2>
-        <p>En cumplimiento con la normativa F.5.4.1 de IVAO, Losana Airlines solo recopila el VID de IVAO y la dirección de correo electrónico del piloto para fines estrictamente administrativos dentro de la aerolínea virtual. Los datos no serán compartidos ni vendidos a terceros.</p>
+        <h2>Privacy Policy / Política de Privacidad (GDPR - F.5.4.1)</h2>
+        <p>In compliance with IVAO rule F.5.4.1, Losana Airlines only collects pilot IVAO VID and email address strictly for internal management purposes. Personal data will never be shared or sold to third parties.</p>
     </div>
 
     <div class="container" id="contacto">
-        <h2>Administración</h2>
-        <p><strong>CEO / Fundador:</strong> VID 652557</p>
-        <p><strong>Correo Oficial:</strong> losanaairlines@gmail.com</p>
+        <h2>Staff & Management</h2>
+        <p><strong>CEO / Founder:</strong> VID 652557</p>
+        <p><strong>Official Email:</strong> losanaairlines@gmail.com</p>
     </div>
 
     <footer>
@@ -169,7 +172,7 @@
             </a>
         </p>
         <div class="disclaimer">
-            <p><strong>DISCLAIMER:</strong> Losana Airlines es una organización de aviación virtual que opera de manera independiente y sin fines de lucro, dedicada exclusivamente a la simulación de vuelo en la red IVAO. No poseemos afiliación, relación comercial ni respaldo de ninguna aerolínea real o entidad aeronáutica del mundo real. Todos los logos e imágenes de IVAO son propiedad intelectual de IVAO VZW.</p>
+            <p><strong>DISCLAIMER:</strong> Losana Airlines is an independent, non-profit virtual airline project dedicated exclusively to flight simulation within the IVAO network. We have no affiliation, commercial relationship, or endorsement from any real-world airline or aeronautical entity. All IVAO logos and trademarks belong to IVAO VZW.</p>
         </div>
     </footer>
 
